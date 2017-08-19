@@ -17,6 +17,6 @@
     "redis": "^2.7.1",
     "request": "^2.81.0",
     "winston": "^2.3.1",
-    "91video-resolver": "^1.0.0"
+    "91video-resolver": "1.0.1"
   }
 }
