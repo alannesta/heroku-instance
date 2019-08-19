@@ -1,4 +1,5 @@
 const resolver = require('91video-resolver');
+const request = require('request');
 
 const Parser = {
 	parse: function(url) {
