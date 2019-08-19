@@ -19,6 +19,7 @@ const server = http.createServer((req, res) => {
 			}
 		}).catch((err) => {
 			logger.error('Parse failed: ', err);
+			res.end(err);
 		});
 	} else {
 		logger.debug('Invalid request format(inavlid url path/query');
