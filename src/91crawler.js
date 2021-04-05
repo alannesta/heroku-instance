@@ -1,7 +1,5 @@
 const parserServiceV3 = require('./service/parser-service-v3');
-
 const logger = require('./utils/logger');
-
 const http = require('http');
 
 const server = http.createServer((req, res) => {

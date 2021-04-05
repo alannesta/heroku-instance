@@ -1,9 +1,9 @@
 /*
     2021.04.05 try using headless chrome to parse m3u8 url (videojs)
  */
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-core');
 
-const ParserSerive = {
+const ParserService = {
     async parse(url) {
         try {
             const browser = await puppeteer.launch();
@@ -33,4 +33,4 @@ const ParserSerive = {
     }
 };
 
-module.exports = ParserSerive;
+module.exports = ParserService;
