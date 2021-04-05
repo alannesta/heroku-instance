@@ -1,6 +1,4 @@
 const winston = require('winston');
-const os = require('os');
-const path = require('path');
 
 const logger = new (winston.Logger)({
 	transports: getTransportConfig(process.env.NODE_ENV),

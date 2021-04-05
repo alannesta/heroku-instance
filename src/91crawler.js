@@ -1,5 +1,4 @@
 const parserServiceV3 = require('./service/parser-service-v3');
-const logger = require('./utils/logger');
 const http = require('http');
 
 const server = http.createServer((req, res) => {
@@ -7,20 +6,20 @@ const server = http.createServer((req, res) => {
 	if (parsed.pathname === '/parse' && parsed.query.indexOf('http') > -1) {
 		parserServiceV3.parse(parsed.query).then((result) => {
 			if(result && result.indexOf('http') > -1) {
-				logger.debug('Parse success, publish results: ', result);
+				console.log('Parse success, publish results: ', result);
 				res.writeHead(200, { 'Content-Type': 'text/plain' });
 				res.end(result);
 			} else {
-				logger.error('Not able to get valid url result: ', result);
+				console.error('Not able to get valid url result: ', result);
 				res.writeHead(500, { 'Content-Type': 'text/plain' });
 				res.end('parse failed');
 			}
 		}).catch((err) => {
-			logger.error('Parse failed: ', err);
+			console.error('Parse failed: ', err);
 			res.end(err);
 		});
 	} else {
-		logger.debug('Invalid request format(inavlid url path/query');
+		console.log('Invalid request format(inavlid url path/query');
 		res.end('inavlid url path/query');
 	}
 });
