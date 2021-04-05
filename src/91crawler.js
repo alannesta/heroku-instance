@@ -1,4 +1,4 @@
-const parserServiceV2 = require('./service/parser-service-v2');
+const parserServiceV3 = require('./service/parser-service-v3');
 
 const logger = require('./utils/logger');
 
@@ -7,7 +7,7 @@ const http = require('http');
 const server = http.createServer((req, res) => {
 	var parsed = require('url').parse(req.url);
 	if (parsed.pathname === '/parse' && parsed.query.indexOf('http') > -1) {
-		parserServiceV2.parse(parsed.query).then((result) => {
+		parserServiceV3.parse(parsed.query).then((result) => {
 			if(result && result.indexOf('http') > -1) {
 				logger.debug('Parse success, publish results: ', result);
 				res.writeHead(200, { 'Content-Type': 'text/plain' });
