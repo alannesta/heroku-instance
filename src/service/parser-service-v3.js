@@ -36,9 +36,7 @@ const ParserService = {
             console.trace(e);
             return 'http://www.somerandomurl.io'
         } finally {
-            if (browser) {
-                await browser.close();
-            }
+            await browser.close();
         }
     }
 };
