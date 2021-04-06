@@ -15,8 +15,9 @@ const server = http.createServer((req, res) => {
 				res.end('parse failed');
 			}
 		}).catch((err) => {
-			console.error('Parse failed: ', err);
-			res.end(err);
+			console.error('Parse failed, using placeholder url: ', err);
+			res.writeHead(200, { 'Content-Type': 'text/plain' });
+			res.end('http://placeholderurl.io');
 		});
 	} else {
 		console.log('Invalid request format(inavlid url path/query');

@@ -9,11 +9,12 @@ const ParserService = {
     //     return Promise.resolve('http://placeholderurlforvideo.io');
     // }
     async parse(url) {
+        console.log('start parsing:', url);
+        const browser = await puppeteer.launch({
+            executablePath: '/app/.apt/usr/bin/google-chrome'
+        });
+
         try {
-            console.log('start parsing:', url);
-            const browser = await puppeteer.launch({
-                executablePath: '/app/.apt/usr/bin/google-chrome'
-            });
             const page = await browser.newPage();
             await page.setUserAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4454.192 Safari/537.36");
             await page.setCookie({name: "language", value: "cn_CN", domain: "www.91porn.com"});
