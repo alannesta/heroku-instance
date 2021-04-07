@@ -10,12 +10,12 @@
   "author": "Alan Cao",
   "license": "ISC",
   "dependencies": {
-    "91video-resolver": "1.2.2",
+    "91video-resolver": "1.2.1",
     "async": "^2.3.0",
     "cheerio": "^0.22.0",
     "entities": "^1.1.1",
     "puppeteer-core": "^5.5.0",
-    "request": "^2.81.0",
-    "winston": "^2.3.1"
+    "request": "2.81.0",
+    "winston": "2.3.1"
   }
 }
