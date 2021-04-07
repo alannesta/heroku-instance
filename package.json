@@ -10,7 +10,7 @@
   "author": "Alan Cao",
   "license": "ISC",
   "dependencies": {
-    "91video-resolver": "1.2.1",
+    "91video-resolver": "1.2.2",
     "async": "^2.3.0",
     "cheerio": "^0.22.0",
     "entities": "^1.1.1",
