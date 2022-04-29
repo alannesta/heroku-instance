@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "91video-resolver": "1.2.2",
-    "async": "^2.3.0",
+    "async": "^2.6.4",
     "cheerio": "^0.22.0",
     "entities": "^1.1.1",
     "puppeteer-core": "^5.5.0",
